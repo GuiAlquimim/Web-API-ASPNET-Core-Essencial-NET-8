@@ -752,3 +752,47 @@ Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Ex
 SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
 FROM [Produtos] AS [p]
 Information: 0 - Application is shutting down...
+Information: ListeningOnAddress - Now listening on: https://localhost:7042
+Information: ListeningOnAddress - Now listening on: http://localhost:5173
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\Dev\APICatalogo\APICatalogo
+Information: 0 - ### Executando -> OnActionExecuting
+Information: 0 - #####################################################
+Information: 0 - 5:27:14 PM
+Information: 0 - ModelState: True
+Information: 0 - #####################################################
+Information: 0 - ================= GET api/categorias/produtos =================
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: 0 - ### Executando -> OnActionExecuted
+Information: 0 - #####################################################
+Information: 0 - 5:27:16 PM
+Information: 0 - StatusCode: 200
+Information: 0 - #####################################################
+Information: ListeningOnAddress - Now listening on: https://localhost:7042
+Information: ListeningOnAddress - Now listening on: http://localhost:5173
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\Dev\APICatalogo\APICatalogo
+Information: 0 - ### Executando -> OnActionExecuting
+Information: 0 - #####################################################
+Information: 0 - 11:50:24 AM
+Information: 0 - ModelState: True
+Information: 0 - #####################################################
+Information: 0 - ================= GET api/categorias/produtos =================
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: 0 - ### Executando -> OnActionExecuted
+Information: 0 - #####################################################
+Information: 0 - 11:50:26 AM
+Information: 0 - StatusCode: 200
+Information: 0 - #####################################################
+Information: ListeningOnAddress - Now listening on: https://localhost:7042
+Information: ListeningOnAddress - Now listening on: http://localhost:5173
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\Dev\APICatalogo\APICatalogo
+Information: 0 - Application is shutting down...

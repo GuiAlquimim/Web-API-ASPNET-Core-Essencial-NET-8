@@ -42,8 +42,7 @@
               "RelativeToolTip": "APICatalogo\\Repositories\\CategoriaRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T21:10:53.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T21:10:53.395Z"
             },
             {
               "$type": "Document",
@@ -55,8 +54,7 @@
               "RelativeToolTip": "APICatalogo\\Controllers\\CategoriasController.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAowDcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T21:09:57.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T21:09:57.096Z"
             },
             {
               "$type": "Document",
@@ -66,7 +64,7 @@
               "RelativeDocumentMoniker": "APICatalogo\\Repositories\\ProdutoRepository.cs",
               "ToolTip": "C:\\Dev\\APICatalogo\\APICatalogo\\Repositories\\ProdutoRepository.cs",
               "RelativeToolTip": "APICatalogo\\Repositories\\ProdutoRepository.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAwwDYAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowC0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T19:05:58.995Z",
               "EditorCaption": ""
@@ -81,8 +79,7 @@
               "RelativeToolTip": "APICatalogo\\Controllers\\ProdutosController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwE8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T19:05:46.617Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T19:05:46.617Z"
             }
           ]
         }
