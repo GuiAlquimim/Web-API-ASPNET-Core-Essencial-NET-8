@@ -4522,7 +4522,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\guigu\\.nuget\\packages\\": {}
+    "C:\\Users\\GUI-DESKTOP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -4530,11 +4530,11 @@
       "projectUniqueName": "C:\\Dev\\APICatalogo\\APICatalogo\\APICatalogo.csproj",
       "projectName": "APICatalogo",
       "projectPath": "C:\\Dev\\APICatalogo\\APICatalogo\\APICatalogo.csproj",
-      "packagesPath": "C:\\Users\\guigu\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\GUI-DESKTOP\\.nuget\\packages\\",
       "outputPath": "C:\\Dev\\APICatalogo\\APICatalogo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\guigu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GUI-DESKTOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
