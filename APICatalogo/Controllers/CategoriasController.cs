@@ -9,12 +9,13 @@ namespace APICatalogo.Controllers
     [ApiController]
     public class CategoriasController : ControllerBase
     {
-        private readonly ICategoriaRepository _repository;
+        private readonly ICategoriaRepository _categoriaRepository;
+        //private readonly IRepository<Categoria> _repository;
         private readonly ILogger _logger;
 
         public CategoriasController(ICategoriaRepository repository, ILogger<CategoriasController> logger)
         {
-            _repository = repository;
+            _categoriaRepository = repository;
             _logger = logger;
         }
 
@@ -33,7 +34,7 @@ namespace APICatalogo.Controllers
         {
             _logger.LogInformation("================= GET api/categorias/produtos =================");
 
-            var categorias = _repository.GetCategorias();
+            var categorias = _categoriaRepository.GetAll();
 
             return Ok(categorias);
         }
@@ -43,7 +44,7 @@ namespace APICatalogo.Controllers
         {
             _logger.LogInformation($"================= GET api/categorias/id = {id} =================");
 
-            var categoria = _repository.GetCategoria(id);
+            var categoria = _categoriaRepository.Get(c => c.CategoriaId == id);
 
             if (categoria is null)
             {
@@ -60,7 +61,7 @@ namespace APICatalogo.Controllers
             if (categoria is null)
                 return BadRequest();
 
-            var novaCategoria = _repository.Create(categoria);
+            var novaCategoria = _categoriaRepository.Create(categoria);
 
             // retornar http 201 - Created
             return new CreatedAtRouteResult("ObterCategoria",
@@ -73,7 +74,7 @@ namespace APICatalogo.Controllers
             if (id != categoria.CategoriaId)
                 return BadRequest();
 
-            _repository.Update(categoria);
+            _categoriaRepository.Update(categoria);
 
             return Ok(categoria);
         }
@@ -81,7 +82,7 @@ namespace APICatalogo.Controllers
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
-            var categoria = _repository.GetCategoria(id);
+            var categoria = _categoriaRepository.Get(c => c.CategoriaId == id);
 
             if (categoria is null)
             {
@@ -89,7 +90,7 @@ namespace APICatalogo.Controllers
                 return NotFound($"Categoria com o Id {id} não encontrada...");
             }
 
-            _repository.Delete(id);
+            _categoriaRepository.Delete(categoria);
 
             return Ok(categoria);
         }
