@@ -1,4 +1,5 @@
 ﻿using APICatalogo.DTOs;
+using APICatalogo.DTOs.Mappings;
 using APICatalogo.Models;
 using APICatalogo.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -23,24 +24,10 @@ namespace APICatalogo.Controllers
         {
             var produtos = _uof.ProdutoRepository.GetProdutosPorCategoria(id);
 
-            if (produtos is null)
+            if (!produtos.Any())
                 return NotFound();
 
-            var produtosDto = new List<ProdutoDTO>();
-            foreach (var produto in produtos)
-            {
-                var produtoDto = new ProdutoDTO();
-
-                produtoDto.ProdutoId = produto.ProdutoId;
-                produtoDto.Nome = produto.Nome;
-                produtoDto.Descricao = produto.Descricao;
-                produtoDto.Preco = produto.Preco;
-                produtoDto.ImagemUrl = produto.ImagemUrl;
-                produtoDto.Estoque = produto.Estoque;
-                produtoDto.CategoriaId = produto.CategoriaId;
-
-                produtosDto.Add(produtoDto);
-            }
+            var produtosDto = produtos.ToProdutoDTOList();
 
             return Ok(produtosDto);
         }
@@ -53,21 +40,7 @@ namespace APICatalogo.Controllers
             if (produtos is null)
                 return NotFound();
 
-            var produtosDto = new List<ProdutoDTO>();
-            foreach (var produto in produtos)
-            {
-                var produtoDto = new ProdutoDTO();
-
-                produtoDto.ProdutoId = produto.ProdutoId;
-                produtoDto.Nome = produto.Nome;
-                produtoDto.Descricao = produto.Descricao;
-                produtoDto.Preco = produto.Preco;
-                produtoDto.ImagemUrl = produto.ImagemUrl;
-                produtoDto.Estoque = produto.Estoque;
-                produtoDto.CategoriaId = produto.CategoriaId;
-
-                produtosDto.Add(produtoDto);
-            }
+            var produtosDto = produtos.ToProdutoDTOList();
 
             return Ok(produtosDto);
         }
@@ -80,35 +53,17 @@ namespace APICatalogo.Controllers
             if (produto is null)
                 return NotFound($"Produto com Id {id} não encontrado...");
 
-            var produtoDto = new ProdutoDTO()
-            {
-                ProdutoId = produto.ProdutoId,
-                Nome = produto.Nome,
-                Descricao = produto.Descricao,
-                Preco = produto.Preco,
-                ImagemUrl = produto.ImagemUrl,
-                Estoque = produto.Estoque,
-                CategoriaId = produto.CategoriaId
-            };
+            var produtoDTO = produto.ToProdutoDTO();
 
-            return Ok(produtoDto);
+            return Ok(produtoDTO);
         }
 
         [HttpPost]
-        public ActionResult<ProdutoDTO> Insert(ProdutoDTO produtoDto)
+        public ActionResult<ProdutoDTO> Insert(ProdutoDTO produtoDTO)
         {
             // Http 201: Created
 
-            var produto = new Produto()
-            {
-                ProdutoId = produtoDto.ProdutoId,
-                Nome = produtoDto.Nome,
-                Descricao = produtoDto.Descricao,
-                Preco = produtoDto.Preco,
-                ImagemUrl = produtoDto.ImagemUrl,
-                Estoque = produtoDto.Estoque,
-                CategoriaId = produtoDto.CategoriaId
-            };
+            var produto = produtoDTO.ToProduto();
 
             if (produto is null)
                 return BadRequest();
@@ -116,53 +71,26 @@ namespace APICatalogo.Controllers
             _uof.ProdutoRepository.Create(produto);
             _uof.Commit();
 
-            var novoProdutoDto = new ProdutoDTO()
-            {
-                ProdutoId = produto.ProdutoId,
-                Nome = produto.Nome,
-                Descricao = produto.Descricao,
-                Preco = produto.Preco,
-                ImagemUrl = produto.ImagemUrl,
-                Estoque = produto.Estoque,
-                CategoriaId = produto.CategoriaId
-            };
+            var novoProdutoDTO = produto.ToProdutoDTO();
 
             return new CreatedAtRouteResult("ObterProduto",
-                new { id = novoProdutoDto.ProdutoId }, novoProdutoDto);
+                new { id = novoProdutoDTO.ProdutoId }, novoProdutoDTO);
         }
 
         [HttpPut("{id:int}")]
-        public ActionResult<ProdutoDTO> Update(int id, ProdutoDTO produtoDto)
+        public ActionResult<ProdutoDTO> Update(int id, ProdutoDTO produtoDTO)
         {
             // Http 204: No content
 
-            var produto = new Produto()
-            {
-                ProdutoId = produtoDto.ProdutoId,
-                Nome = produtoDto.Nome,
-                Descricao = produtoDto.Descricao,
-                Preco = produtoDto.Preco,
-                ImagemUrl = produtoDto.ImagemUrl,
-                Estoque = produtoDto.Estoque,
-                CategoriaId = produtoDto.CategoriaId
-            };
+            var produto = produtoDTO.ToProduto();
 
-            if (id != produto.ProdutoId)
+            if (produto is null || id != produto.ProdutoId)
                 return BadRequest();
 
             _uof.ProdutoRepository.Update(produto);
             _uof.Commit();
 
-            var produtoAtualizadoDto = new ProdutoDTO()
-            {
-                ProdutoId = produto.ProdutoId,
-                Nome = produto.Nome,
-                Descricao = produto.Descricao,
-                Preco = produto.Preco,
-                ImagemUrl = produto.ImagemUrl,
-                Estoque = produto.Estoque,
-                CategoriaId = produto.CategoriaId
-            };
+            var produtoAtualizadoDto = produto.ToProdutoDTO();
 
             return Ok(produtoAtualizadoDto);
         }
@@ -178,16 +106,7 @@ namespace APICatalogo.Controllers
             _uof.ProdutoRepository.Delete(produto);
             _uof.Commit();
 
-            var produtoDeletadoDto = new ProdutoDTO()
-            {
-                ProdutoId = produto.ProdutoId,
-                Nome = produto.Nome,
-                Descricao = produto.Descricao,
-                Preco = produto.Preco,
-                ImagemUrl = produto.ImagemUrl,
-                Estoque = produto.Estoque,
-                CategoriaId = produto.CategoriaId
-            };
+            var produtoDeletadoDto = produto.ToProdutoDTO();
 
             return Ok(produtoDeletadoDto);
         }

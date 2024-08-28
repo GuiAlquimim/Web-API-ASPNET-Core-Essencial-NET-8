@@ -1,4 +1,5 @@
 ﻿using APICatalogo.DTOs;
+using APICatalogo.DTOs.Mappings;
 using APICatalogo.Filters;
 using APICatalogo.Models;
 using APICatalogo.Repositories;
@@ -37,19 +38,10 @@ namespace APICatalogo.Controllers
             _logger.LogInformation("================= GET api/categorias/produtos =================");
 
             var categorias = _uof.CategoriaRepository.GetAll();
-            var categoriasDto = new List<CategoriaDTO>();
 
-            foreach (var categoria in categorias)
-            {
-                CategoriaDTO categoriaDto = new CategoriaDTO();
-                categoriaDto.CategoriaId = categoria.CategoriaId;
-                categoriaDto.Nome = categoria.Nome;
-                categoriaDto.ImagemUrl = categoria.ImagemUrl;
+            var categoriasDTO = categorias.ToCategoriaDTOList();
 
-                categoriasDto.Add(categoriaDto);
-            }
-
-            return Ok(categoriasDto);
+            return Ok(categoriasDTO);
         }
 
         [HttpGet("{id:int:min(1)}", Name = "ObterCategoria")]
@@ -65,25 +57,15 @@ namespace APICatalogo.Controllers
                 return NotFound($"Categoria com Id {id} não encontrada");
             }
 
-            var categoriaDto = new CategoriaDTO()
-            {
-                CategoriaId = categoria.CategoriaId,
-                Nome = categoria.Nome,
-                ImagemUrl = categoria.ImagemUrl,
-            };
+            var categoriaDTO = categoria.ToCategoriaDTO();
 
-            return Ok(categoriaDto);
+            return Ok(categoriaDTO);
         }
 
         [HttpPost]
-        public ActionResult<CategoriaDTO> Insert(CategoriaDTO categoriaDto)
+        public ActionResult<CategoriaDTO> Insert(CategoriaDTO categoriaDTO)
         {
-            var categoria = new Categoria()
-            {
-                CategoriaId = categoriaDto.CategoriaId,
-                Nome = categoriaDto.Nome,
-                ImagemUrl = categoriaDto.ImagemUrl,
-            };
+            var categoria = categoriaDTO.ToCategoria();
 
             if (categoria is null)
                 return BadRequest();
@@ -91,42 +73,27 @@ namespace APICatalogo.Controllers
             _uof.CategoriaRepository.Create(categoria);
             _uof.Commit();
 
-            var novaCategoriaDto = new CategoriaDTO()
-            {
-                CategoriaId = categoria.CategoriaId,
-                Nome = categoria.Nome,
-                ImagemUrl = categoria.ImagemUrl,
-            };
+            var novaCategoriaDTO = categoria.ToCategoriaDTO();
 
             // retornar http 201 - Created
             return new CreatedAtRouteResult("ObterCategoria",
-               new { id = novaCategoriaDto.CategoriaId }, novaCategoriaDto);
+               new { id = novaCategoriaDTO.CategoriaId }, novaCategoriaDTO);
         }
 
         [HttpPut("{id:int}")]
-        public ActionResult<CategoriaDTO> Update(int id, CategoriaDTO categoriaDto)
+        public ActionResult<CategoriaDTO> Update(int id, CategoriaDTO categoriaDTO)
         {
-            var categoria = new Categoria()
-            {
-                CategoriaId = categoriaDto.CategoriaId,
-                Nome = categoriaDto.Nome,
-                ImagemUrl = categoriaDto.ImagemUrl,
-            };
+            var categoria = categoriaDTO.ToCategoria();
 
-            if (id != categoria.CategoriaId)
+            if (categoria is null || id != categoria.CategoriaId)
                 return BadRequest();
 
             _uof.CategoriaRepository.Update(categoria);
             _uof.Commit();
 
-            var CategoriaAtualizadaDto = new CategoriaDTO()
-            {
-                CategoriaId = categoriaDto.CategoriaId,
-                Nome = categoriaDto.Nome,
-                ImagemUrl = categoriaDto.ImagemUrl,
-            };
+            var CategoriaAtualizadaDTO = categoria.ToCategoriaDTO();
 
-            return Ok(CategoriaAtualizadaDto);
+            return Ok(CategoriaAtualizadaDTO);
         }
 
         [HttpDelete("{id:int}")]
@@ -143,14 +110,9 @@ namespace APICatalogo.Controllers
             _uof.CategoriaRepository.Delete(categoria);
             _uof.Commit();
 
-            var CategoriaDeletadaDto = new CategoriaDTO()
-            {
-                CategoriaId = categoria.CategoriaId,
-                Nome = categoria.Nome,
-                ImagemUrl = categoria.ImagemUrl,
-            };
+            var CategoriaDeletadaDTO = categoria.ToCategoriaDTO();
 
-            return Ok(CategoriaDeletadaDto);
+            return Ok(CategoriaDeletadaDTO);
         }
     }
 }

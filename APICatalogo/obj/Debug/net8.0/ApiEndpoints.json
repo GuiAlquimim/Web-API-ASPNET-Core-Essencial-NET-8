@@ -28,7 +28,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "categoriaDto",
+        "Name": "categoriaDTO",
         "Type": "APICatalogo.DTOs.CategoriaDTO",
         "IsRequired": true
       }
@@ -86,7 +86,7 @@
         "IsRequired": true
       },
       {
-        "Name": "categoriaDto",
+        "Name": "categoriaDTO",
         "Type": "APICatalogo.DTOs.CategoriaDTO",
         "IsRequired": true
       }
@@ -158,7 +158,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "produtoDto",
+        "Name": "produtoDTO",
         "Type": "APICatalogo.DTOs.ProdutoDTO",
         "IsRequired": true
       }
@@ -216,7 +216,7 @@
         "IsRequired": true
       },
       {
-        "Name": "produtoDto",
+        "Name": "produtoDTO",
         "Type": "APICatalogo.DTOs.ProdutoDTO",
         "IsRequired": true
       }
