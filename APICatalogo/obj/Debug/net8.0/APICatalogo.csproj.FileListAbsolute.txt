@@ -135,3 +135,5 @@ C:\Dev\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.pdb
 C:\Dev\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.genruntimeconfig.cache
 C:\Dev\APICatalogo\APICatalogo\obj\Debug\net8.0\ref\APICatalogo.dll
 C:\Dev\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.sourcelink.json
+C:\Dev\APICatalogo\APICatalogo\bin\Debug\net8.0\AutoMapper.dll
+C:\Dev\APICatalogo\APICatalogo\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

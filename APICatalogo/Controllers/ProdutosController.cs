@@ -2,6 +2,7 @@
 using APICatalogo.DTOs.Mappings;
 using APICatalogo.Models;
 using APICatalogo.Repositories;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APICatalogo.Controllers
@@ -13,10 +14,12 @@ namespace APICatalogo.Controllers
         //private readonly IRepository<Produto> _repository;
         //private readonly IProdutoRepository _produtoRepository;
         private readonly IUnitOfWork _uof;
+        private readonly IMapper _mapper;
 
-        public ProdutosController(IUnitOfWork uof)
+        public ProdutosController(IUnitOfWork uof, IMapper mapper)
         {
             _uof = uof;
+            _mapper = mapper;
         }
 
         [HttpGet("ProdutosPorCategoria/{id:int}")]
@@ -25,9 +28,10 @@ namespace APICatalogo.Controllers
             var produtos = _uof.ProdutoRepository.GetProdutosPorCategoria(id);
 
             if (!produtos.Any())
-                return NotFound();
+                return NotFound($"Nenhum produto da categoria com id {id} encontrado.");
 
-            var produtosDto = produtos.ToProdutoDTOList();
+            // var destino = _mapper.Map<destino>(origem);
+            var produtosDto = _mapper.Map<IEnumerable<ProdutoDTO>>(produtos);
 
             return Ok(produtosDto);
         }
@@ -38,9 +42,10 @@ namespace APICatalogo.Controllers
             var produtos = _uof.ProdutoRepository.GetAll();
 
             if (produtos is null)
-                return NotFound();
+                return NotFound("Nenhum produto encontrado.");
 
-            var produtosDto = produtos.ToProdutoDTOList();
+            // var destino = _mapper.Map<destino>(origem);
+            var produtosDto = _mapper.Map<IEnumerable<ProdutoDTO>>(produtos);
 
             return Ok(produtosDto);
         }
@@ -53,7 +58,8 @@ namespace APICatalogo.Controllers
             if (produto is null)
                 return NotFound($"Produto com Id {id} não encontrado...");
 
-            var produtoDTO = produto.ToProdutoDTO();
+            // var destino = _mapper.Map<destino>(origem);
+            var produtoDTO = _mapper.Map<ProdutoDTO>(produto);
 
             return Ok(produtoDTO);
         }
@@ -63,7 +69,8 @@ namespace APICatalogo.Controllers
         {
             // Http 201: Created
 
-            var produto = produtoDTO.ToProduto();
+            // var destino = _mapper.Map<destino>(origem);
+            var produto = _mapper.Map<Produto>(produtoDTO);
 
             if (produto is null)
                 return BadRequest();
@@ -71,7 +78,8 @@ namespace APICatalogo.Controllers
             _uof.ProdutoRepository.Create(produto);
             _uof.Commit();
 
-            var novoProdutoDTO = produto.ToProdutoDTO();
+            // var destino = _mapper.Map<destino>(origem);
+            var novoProdutoDTO = _mapper.Map<ProdutoDTO>(produto);
 
             return new CreatedAtRouteResult("ObterProduto",
                 new { id = novoProdutoDTO.ProdutoId }, novoProdutoDTO);
@@ -82,7 +90,8 @@ namespace APICatalogo.Controllers
         {
             // Http 204: No content
 
-            var produto = produtoDTO.ToProduto();
+            // var destino = _mapper.Map<destino>(origem);
+            var produto = _mapper.Map<Produto>(produtoDTO);
 
             if (produto is null || id != produto.ProdutoId)
                 return BadRequest();
@@ -90,7 +99,8 @@ namespace APICatalogo.Controllers
             _uof.ProdutoRepository.Update(produto);
             _uof.Commit();
 
-            var produtoAtualizadoDto = produto.ToProdutoDTO();
+            // var destino = _mapper.Map<destino>(origem);
+            var produtoAtualizadoDto = _mapper.Map<ProdutoDTO>(produto);
 
             return Ok(produtoAtualizadoDto);
         }
@@ -106,7 +116,8 @@ namespace APICatalogo.Controllers
             _uof.ProdutoRepository.Delete(produto);
             _uof.Commit();
 
-            var produtoDeletadoDto = produto.ToProdutoDTO();
+            // var destino = _mapper.Map<destino>(origem);
+            var produtoDeletadoDto = _mapper.Map<ProdutoDTO>(produto);
 
             return Ok(produtoDeletadoDto);
         }
