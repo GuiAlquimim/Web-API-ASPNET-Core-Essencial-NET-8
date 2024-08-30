@@ -16,7 +16,6 @@ public static class ProdutoDTOMappingExtension
             Descricao = produto.Descricao,
             Preco = produto.Preco,
             ImagemUrl = produto.ImagemUrl,
-            Estoque = produto.Estoque,
             CategoriaId = produto.CategoriaId
         };
     }
@@ -33,7 +32,6 @@ public static class ProdutoDTOMappingExtension
             Descricao = produtoDTO.Descricao,
             Preco = produtoDTO.Preco,
             ImagemUrl = produtoDTO.ImagemUrl,
-            Estoque = produtoDTO.Estoque,
             CategoriaId = produtoDTO.CategoriaId
         };
     }
@@ -54,7 +52,6 @@ public static class ProdutoDTOMappingExtension
             produtoDTO.Descricao = produto.Descricao;
             produtoDTO.Preco = produto.Preco;
             produtoDTO.ImagemUrl = produto.ImagemUrl;
-            produtoDTO.Estoque = produto.Estoque;
             produtoDTO.CategoriaId = produto.CategoriaId;
 
             produtosDTO.Add(produtoDTO);
