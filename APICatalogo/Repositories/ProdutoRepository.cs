@@ -14,13 +14,24 @@ public class ProdutoRepository : Repository<Produto>, IProdutoRepository
         _context = context;
     }
 
-    public IEnumerable<Produto> GetProdutos(ProdutosParameters produtosParams)
+    public PagedList<Produto> GetProdutosPagination(ProdutosParameters produtosParams)
     {
-        return GetAll()
-            .OrderBy(p => p.Nome)
-            .Skip((produtosParams.PageNumber - 1 ) * produtosParams.PageSize)
-            .Take(produtosParams.PageSize).ToList();
+        var produtos = GetAll().OrderBy(p => p.ProdutoId).AsQueryable();
+
+        var produtosOrdenados = PagedList<Produto>.ToPagedList(produtos, produtosParams.PageNumber, produtosParams.PageSize);
+
+        return produtosOrdenados;
     }
+
+    //public IEnumerable<Produto> GetProdutosPagination(ProdutosParameters produtosParams)
+    //{
+    //    return GetAll()
+    //        .OrderBy(p => p.Nome)
+    //        .Skip((produtosParams.PageNumber - 1 ) * produtosParams.PageSize)
+    //        .Take(produtosParams.PageSize).ToList();
+    //}
+
+
 
     public IEnumerable<Produto> GetProdutosPorCategoria(int id)
     {
