@@ -261,6 +261,37 @@
   },
   {
     "ContainingType": "APICatalogo.Controllers.ProdutosController",
+    "Method": "GetProdutosPagination",
+    "RelativePath": "Produtos/Pagination",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[APICatalogo.Models.Produto, APICatalogo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "APICatalogo.Controllers.ProdutosController",
     "Method": "GetProdutosPorCategoria",
     "RelativePath": "Produtos/ProdutosPorCategoria/{id}",
     "HttpMethod": "GET",
