@@ -3008,3 +3008,307 @@ FROM [Produtos] AS [p]
 Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
 FROM [Produtos] AS [p]
+Information: ListeningOnAddress - Now listening on: https://localhost:7042
+Information: ListeningOnAddress - Now listening on: http://localhost:5173
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\Dev\APICatalogo\APICatalogo
+Information: 0 - ### Executando -> OnActionExecuting
+Information: 0 - #####################################################
+Information: 0 - 6:11:00 PM
+Information: 0 - ModelState: True
+Information: 0 - #####################################################
+Information: 0 - ================= GET api/categorias/produtos =================
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: 0 - ### Executando -> OnActionExecuted
+Information: 0 - #####################################################
+Information: 0 - 6:11:01 PM
+Information: 0 - StatusCode: 200
+Information: 0 - #####################################################
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: ListeningOnAddress - Now listening on: https://localhost:7042
+Information: ListeningOnAddress - Now listening on: http://localhost:5173
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\Dev\APICatalogo\APICatalogo
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: ListeningOnAddress - Now listening on: https://localhost:7042
+Information: ListeningOnAddress - Now listening on: http://localhost:5173
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\Dev\APICatalogo\APICatalogo
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (16ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+WHERE [p].[ProdutoId] = @__id_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Produtos]
+OUTPUT 1
+WHERE [ProdutoId] = @p0;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+WHERE [p].[ProdutoId] = @__id_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Produtos]
+OUTPUT 1
+WHERE [ProdutoId] = @p0;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+WHERE [p].[ProdutoId] = @__id_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Produtos]
+OUTPUT 1
+WHERE [ProdutoId] = @p0;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+WHERE [p].[ProdutoId] = @__id_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Produtos]
+OUTPUT 1
+WHERE [ProdutoId] = @p0;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+WHERE [p].[ProdutoId] = @__id_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Produtos]
+OUTPUT 1
+WHERE [ProdutoId] = @p0;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+WHERE [p].[ProdutoId] = @__id_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Produtos]
+OUTPUT 1
+WHERE [ProdutoId] = @p0;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+WHERE [p].[ProdutoId] = @__id_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Produtos]
+OUTPUT 1
+WHERE [ProdutoId] = @p0;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+WHERE [p].[ProdutoId] = @__id_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Produtos]
+OUTPUT 1
+WHERE [ProdutoId] = @p0;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+WHERE [p].[ProdutoId] = @__id_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Produtos]
+OUTPUT 1
+WHERE [ProdutoId] = @p0;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+WHERE [p].[ProdutoId] = @__id_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Produtos]
+OUTPUT 1
+WHERE [ProdutoId] = @p0;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+WHERE [p].[ProdutoId] = @__id_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Produtos]
+OUTPUT 1
+WHERE [ProdutoId] = @p0;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 300), @p3='?' (DbType = Single), @p4='?' (Size = 300), @p5='?' (Size = 80), @p6='?' (Precision = 10) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Produtos] ([CategoriaId], [DataCadastro], [Descricao], [Estoque], [ImagemUrl], [Nome], [Preco])
+OUTPUT INSERTED.[ProdutoId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 300), @p3='?' (DbType = Single), @p4='?' (Size = 300), @p5='?' (Size = 80), @p6='?' (Precision = 10) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Produtos] ([CategoriaId], [DataCadastro], [Descricao], [Estoque], [ImagemUrl], [Nome], [Preco])
+OUTPUT INSERTED.[ProdutoId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 300), @p3='?' (DbType = Single), @p4='?' (Size = 300), @p5='?' (Size = 80), @p6='?' (Precision = 10) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Produtos] ([CategoriaId], [DataCadastro], [Descricao], [Estoque], [ImagemUrl], [Nome], [Preco])
+OUTPUT INSERTED.[ProdutoId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 300), @p3='?' (DbType = Single), @p4='?' (Size = 300), @p5='?' (Size = 80), @p6='?' (Precision = 10) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Produtos] ([CategoriaId], [DataCadastro], [Descricao], [Estoque], [ImagemUrl], [Nome], [Preco])
+OUTPUT INSERTED.[ProdutoId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 300), @p3='?' (DbType = Single), @p4='?' (Size = 300), @p5='?' (Size = 80), @p6='?' (Precision = 10) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Produtos] ([CategoriaId], [DataCadastro], [Descricao], [Estoque], [ImagemUrl], [Nome], [Preco])
+OUTPUT INSERTED.[ProdutoId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 300), @p3='?' (DbType = Single), @p4='?' (Size = 300), @p5='?' (Size = 80), @p6='?' (Precision = 10) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Produtos] ([CategoriaId], [DataCadastro], [Descricao], [Estoque], [ImagemUrl], [Nome], [Preco])
+OUTPUT INSERTED.[ProdutoId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoriaId], [c].[ImagemUrl], [c].[Nome]
+FROM [Categorias] AS [c]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 300), @p3='?' (DbType = Single), @p4='?' (Size = 300), @p5='?' (Size = 80), @p6='?' (Precision = 10) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Produtos] ([CategoriaId], [DataCadastro], [Descricao], [Estoque], [ImagemUrl], [Nome], [Preco])
+OUTPUT INSERTED.[ProdutoId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProdutoId], [p].[CategoriaId], [p].[DataCadastro], [p].[Descricao], [p].[Estoque], [p].[ImagemUrl], [p].[Nome], [p].[Preco]
+FROM [Produtos] AS [p]

@@ -2,9 +2,11 @@
 using APICatalogo.DTOs.Mappings;
 using APICatalogo.Filters;
 using APICatalogo.Models;
+using APICatalogo.Pagination;
 using APICatalogo.Repositories;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace APICatalogo.Controllers
 {
@@ -33,6 +35,28 @@ namespace APICatalogo.Controllers
             return _context.Categorias.Include(p => p.Produtos).ToList();
         }
         */
+
+        [HttpGet("Pagination")]
+        public ActionResult<IEnumerable<Categoria>> GetProdutosPagination([FromQuery] CategoriasParameters categoriasParameters)
+        {
+            var categorias = _uof.CategoriaRepository.GetCategoriasPagination(categoriasParameters);
+
+            var metadados = new
+            {
+                categorias.TotalCount,
+                categorias.PageSize,
+                categorias.CurrentPage,
+                categorias.TotalPages,
+                categorias.HasNext,
+                categorias.HasPrevious
+            };
+
+            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadados));
+
+            var categoriasDTO = categorias.ToCategoriaDTOList();
+
+            return Ok(categoriasDTO);
+        }
 
         [HttpGet]
         [ServiceFilter(typeof(ApiLoggingFilter))]

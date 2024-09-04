@@ -43,22 +43,17 @@ namespace APICatalogo.Controllers
         public ActionResult<IEnumerable<Produto>> GetProdutosPagination([FromQuery] ProdutosParameters produtosParameters)
         {
             var produtos = _uof.ProdutoRepository.GetProdutosPagination(produtosParameters);
+            return ObterProdutosPaginados(produtos);
+        }
 
-            var metadados = new
-            {
-                produtos.TotalCount,
-                produtos.PageSize,
-                produtos.CurrentPage,
-                produtos.TotalPages,
-                produtos.HasNext,
-                produtos.HasPrevious
-            };
+        [HttpGet("Filter/Preco/Pagination")]
+        public ActionResult<IEnumerable<ProdutoDTO>> GetProdutosFilterPrecoPagination([FromQuery] ProdutosFiltroPreco produtosFiltroPreco)
+        {
+            var produtos = _uof.ProdutoRepository.GetProdutosFiltroPreco(produtosFiltroPreco);
 
-            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadados));
+            ObterProdutosPaginados(produtos);
 
-            var produtosDTO = _mapper.Map<IEnumerable<ProdutoDTO>>(produtos);
-
-            return Ok(produtosDTO);
+            return Ok(produtos);
         }
 
         [HttpGet]
@@ -174,6 +169,25 @@ namespace APICatalogo.Controllers
             var produtoDeletadoDto = _mapper.Map<ProdutoDTO>(produto);
 
             return Ok(produtoDeletadoDto);
+        }
+
+        private ActionResult<IEnumerable<Produto>> ObterProdutosPaginados(PagedList<Produto> produtos)
+        {
+            var metadados = new
+            {
+                produtos.TotalCount,
+                produtos.PageSize,
+                produtos.CurrentPage,
+                produtos.TotalPages,
+                produtos.HasNext,
+                produtos.HasPrevious
+            };
+
+            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadados));
+
+            var produtosDTO = _mapper.Map<IEnumerable<ProdutoDTO>>(produtos);
+
+            return Ok(produtosDTO);
         }
     }
 }

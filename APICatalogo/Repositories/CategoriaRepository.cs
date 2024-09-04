@@ -1,5 +1,6 @@
 ﻿using APICatalogo.Context;
 using APICatalogo.Models;
+using APICatalogo.Pagination;
 
 namespace APICatalogo.Repositories
 {
@@ -10,6 +11,15 @@ namespace APICatalogo.Repositories
         public CategoriaRepository(AppDbContext context) : base(context)
         {
             _context = context;
+        }
+
+        public PagedList<Categoria> GetCategoriasPagination(CategoriasParameters categoriasParams)
+        {
+            var categorias = GetAll().OrderBy(c => c.CategoriaId).AsQueryable();
+
+            var categoriasOrdenadas = PagedList<Categoria>.ToPagedList(categorias, categoriasParams.PageNumber, categoriasParams.PageSize);
+
+            return categoriasOrdenadas;
         }
     }
 }
