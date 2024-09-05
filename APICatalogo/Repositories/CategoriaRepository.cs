@@ -13,6 +13,20 @@ namespace APICatalogo.Repositories
             _context = context;
         }
 
+        public PagedList<Categoria> GetCategoriasFiltroNome(CategoriasFiltroNome categoriasFiltroNomeParameters)
+        {
+            var categorias = GetAll().AsQueryable();
+
+            if (!string.IsNullOrEmpty(categoriasFiltroNomeParameters.Nome))
+            {
+                categorias = categorias.Where(c => c.Nome.Contains(categoriasFiltroNomeParameters.Nome));
+            }
+
+            var categoriasFiltradas = PagedList<Categoria>.ToPagedList(categorias, categoriasFiltroNomeParameters.PageNumber, categoriasFiltroNomeParameters.PageSize);
+
+            return categoriasFiltradas;
+        }
+
         public PagedList<Categoria> GetCategoriasPagination(CategoriasParameters categoriasParams)
         {
             var categorias = GetAll().OrderBy(c => c.CategoriaId).AsQueryable();
