@@ -141,3 +141,6 @@ C:\Dev\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.d
 C:\Dev\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Dev\APICatalogo\APICatalogo\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Dev\APICatalogo\APICatalogo\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Dev\APICatalogo\APICatalogo\bin\Debug\net8.0\JetBrains.Annotations.dll
+C:\Dev\APICatalogo\APICatalogo\bin\Debug\net8.0\X.PagedList.dll
+C:\Dev\APICatalogo\APICatalogo\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll

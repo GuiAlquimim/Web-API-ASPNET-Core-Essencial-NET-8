@@ -4,9 +4,9 @@ namespace APICatalogo.Repositories;
 
 public interface IRepository<T>
 {
-    IEnumerable<T> GetAll();
+    Task<IEnumerable<T>> GetAllAsync();
 
-    T? Get(Expression<Func<T, bool>> predicate);
+    Task<T?> GetAsync(Expression<Func<T, bool>> predicate);
 
     T Create(T entity);
 
