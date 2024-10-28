@@ -10,11 +10,11 @@
         "projectUniqueName": "C:\\Dev\\APICatalogo\\APICatalogo\\APICatalogo.csproj",
         "projectName": "APICatalogo",
         "projectPath": "C:\\Dev\\APICatalogo\\APICatalogo\\APICatalogo.csproj",
-        "packagesPath": "C:\\Users\\GUI-DESKTOP\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\galqu\\.nuget\\packages\\",
         "outputPath": "C:\\Dev\\APICatalogo\\APICatalogo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\GUI-DESKTOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\galqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,6 +54,14 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "Microsoft.AspNetCore.JsonPatch": {
               "target": "Package",
               "version": "[8.0.8, )"
@@ -74,7 +82,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.7.3, )"
+              "version": "[6.8.0, )"
             },
             "X.PagedList.Mvc.Core": {
               "target": "Package",
@@ -100,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -5,6 +5,7 @@ using APICatalogo.Models;
 using APICatalogo.Pagination;
 using APICatalogo.Repositories;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using X.PagedList;
@@ -57,7 +58,8 @@ namespace APICatalogo.Controllers
             return Ok(categoriasFiltradasDTO);
         }
 
-        [HttpGet] 
+        [HttpGet]
+        [Authorize]
         [ServiceFilter(typeof(ApiLoggingFilter))]
         public async Task<ActionResult<IEnumerable<CategoriaDTO>>> GetAll()
         {

@@ -11,9 +11,8 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("797e342a-195b-4999-a5ed-1fda564d9210")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("APICatalogo")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5aa4d996fbeb84203f0b1ff97997582cbda7e1ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("APICatalogo")]
